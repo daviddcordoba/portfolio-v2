@@ -1,30 +1,31 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCIE = [
   {
     date: "Octubre 2023",
     title: "Desarrollador Back-end",
     company: "Andromeda",
-    social:'https://www.linkedin.com/company/andromeda-computer/',
+    social: "https://www.linkedin.com/company/andromeda-computer/",
     description:
-    "Participe en la creación y desarrollo de la lógica del contrato inteligente para una aplicación Web3 que se basa en la autogestión de energía eléctrica."
+      "Participe en la creación y desarrollo de la lógica del contrato inteligente para una aplicación Web3 que se basa en la autogestión de energía eléctrica. Demostré solidas habilidades en el backend y me adapté rápidamente al explorar tecnologías emergentes como la blockchain.",
   },
   {
     date: "Enero 2023",
     title: "Desarrollador Front-end",
     company: "Chimu sublimaciones",
-    social: 'https://www.facebook.com/chimusublimaciones/?locale=hi_IN',
-    description:"Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de la página web. Integración de Whatsapp para los pedidos por la web",
-      link: 'https://chimu.netlify.app/'
+    social: "https://www.facebook.com/chimusublimaciones/?locale=hi_IN",
+    description:
+      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de la página web. Integración de Whatsapp para los pedidos por la web. Colaboré con el equipo (incluidos programadores y diseñadores) para la correcta implementación de las mejores prácticas web.",
+    link: "https://chimu.netlify.app/",
   },
-]
+];
 ---
 
 <ol class="relative mt-16">
   {
     EXPERIENCIE.map((experiencie) => (
       <li class="">
-        <ExperienceItem {...experiencie} /> 
+        <ExperienceItem {...experiencie} />
       </li>
     ))
   }
