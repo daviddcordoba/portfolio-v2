@@ -1,10 +1,10 @@
 ---
-const personalImageAlt = "David Cordoba"
-import Badge from "@/components/Badge.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
-import personalImage from '../assets/1652900279494.jfif'
+const personalImageAlt = "David Cordoba";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import personalImage from "../assets/1652900279494.jfif";
 ---
 
 <div class="max-w-xl">
@@ -31,12 +31,11 @@ import personalImage from '../assets/1652900279494.jfif'
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    +1 años de experiencia. <strong
-      >Desarrollador y Programador</strong
-    >. Especializado en el desarrollo de aplicaciones web.
+    +1 años de experiencia. <strong>Desarrollador y Programador</strong>.
+    Especializado en el desarrollo de aplicaciones web.
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill id= 'emailPill'>
+    <SocialPill id="emailPill">
       <MailIcon class="size-4" />
       <span id="contactText">Contáctame</span>
     </SocialPill>
@@ -48,18 +47,22 @@ import personalImage from '../assets/1652900279494.jfif'
 </div>
 
 <script>
-  const emailPill = document.getElementById('emailPill');
-  const contactText = document.getElementById('contactText');
+  const emailPill = document.getElementById("emailPill");
+  const contactText = document.getElementById("contactText");
 
-  emailPill?.addEventListener('click', () => {
-    navigator.clipboard.writeText('david.cordoba@mi.unc.edu.ar')
+  emailPill?.addEventListener("click", () => {
+    navigator.clipboard
+      .writeText("davidcordoba.dev@gmail.com")
       .then(() => {
-        contactText?contactText.textContent = 'Correo copiado al portapeles!' : ''
+        contactText
+          ? (contactText.textContent = "Correo copiado al portapeles!")
+          : "";
         setTimeout(() => {
-          contactText?contactText.textContent = 'Contáctame':'';
+          contactText ? (contactText.textContent = "Contáctame") : "";
         }, 3000); // 3000 milisegundos = 3 segundos
       })
-      .catch((error) => console.error('Error al copiar al portapapeles:', error));
+      .catch((error) =>
+        console.error("Error al copiar al portapapeles:", error)
+      );
   });
-  
 </script>

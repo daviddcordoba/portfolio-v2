@@ -1,5 +1,5 @@
 ---
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
@@ -10,8 +10,9 @@ const currentYear = new Date().getFullYear()
   >
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
       >© {currentYear}
-      <a href="https://linkedin.com/in/daviddcordoba" class="hover:underline">David Cordoba</a>. Casi
-      todos los derechos reservados
+      <a href="https://linkedin.com/in/daviddcordoba" class="hover:underline"
+        >David Cordoba</a
+      >. Casi todos los derechos reservados
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
@@ -20,26 +21,26 @@ const currentYear = new Date().getFullYear()
         <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
       </li>
       <li>
-        <span id="contacto" class="hover:underline"
-          >Contacto</span
-        >
+        <span id="contacto" class="hover:underline">Contacto</span>
       </li>
     </ul>
   </div>
 </footer>
 
 <script>
-  const emailPill = document.getElementById('contacto');
+  const emailPill = document.getElementById("contacto");
 
-  emailPill?.addEventListener('click', () => {
-    navigator.clipboard.writeText('david.cordoba@mi.unc.edu.ar')
+  emailPill?.addEventListener("click", () => {
+    navigator.clipboard
+      .writeText("davidcordoba.dev@gmail.com")
       .then(() => {
-        emailPill.textContent = 'Correo copiado al portapeles!';
+        emailPill.textContent = "Correo copiado al portapeles!";
         setTimeout(() => {
-          emailPill.textContent = 'Contacto';
+          emailPill.textContent = "Contacto";
         }, 3000); // 3000 milisegundos = 3 segundos
       })
-      .catch((error) => console.error('Error al copiar al portapapeles:', error));
+      .catch((error) =>
+        console.error("Error al copiar al portapapeles:", error)
+      );
   });
-  
 </script>
