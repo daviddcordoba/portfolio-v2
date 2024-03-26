@@ -1,5 +1,5 @@
 ---
-import resume from '../assets/cvDavidCordoba.pdf'
+import resume from "../assets/cvDavidCordoba.pdf";
 ---
 
 <footer
@@ -8,13 +8,13 @@ import resume from '../assets/cvDavidCordoba.pdf'
   <div
     class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
   >
-    
     <ul
-      class="flex gap-2.5 items-center m-3 text-sm font-medium dark:text-white/90 "
+      class="flex gap-2.5 items-center m-3 text-sm font-medium dark:text-white/90"
     >
-      
       <li>
-        <a href={resume} class="hover:underline" download='cvDavidCordoba'>Descargar CV</a>
+        <a href={resume} class="hover:underline" download="cvDavidCordoba"
+          >Descargar CV</a
+        >
       </li>
       <li>
         <span id="contacto" class="hover:underline">Contacto</span>
@@ -28,7 +28,7 @@ import resume from '../assets/cvDavidCordoba.pdf'
 
   emailPill?.addEventListener("click", () => {
     navigator.clipboard
-      .writeText("davidcordoba.dev@gmail.com")
+      .writeText("david.cordoba@mi.unc.edu.ar")
       .then(() => {
         emailPill.textContent = "Correo copiado al portapeles!";
         setTimeout(() => {
