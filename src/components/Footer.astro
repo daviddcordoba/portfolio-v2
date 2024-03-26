@@ -1,4 +1,5 @@
 ---
+import resume from '../assets/cvDavidCordoba.pdf'
 const currentYear = new Date().getFullYear();
 ---
 
@@ -8,17 +9,15 @@ const currentYear = new Date().getFullYear();
   <div
     class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
   >
-    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
-      >© {currentYear}
-      <a href="https://linkedin.com/in/daviddcordoba" class="hover:underline"
-        >David Cordoba</a
-      >. Casi todos los derechos reservados
-    </span>
+    
     <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
+      class="flex gap-2.5 items-center m-3 text-sm font-medium dark:text-white/90 "
     >
       <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+        <a href="/#sobre-mi" class="hover:underline">Sobre mí</a>
+      </li>
+      <li>
+        <a href={resume} class="hover:underline" download='cvDavidCordoba'>Descargar CV</a>
       </li>
       <li>
         <span id="contacto" class="hover:underline">Contacto</span>
