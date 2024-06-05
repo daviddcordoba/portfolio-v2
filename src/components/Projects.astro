@@ -59,7 +59,7 @@ const PROJECTS = [
     description:
       " Aplicación que permite a los usuarios registrar sus gastos e ingresos financieros. Los temas cubiertos incluyen fundamentos de API REST, Redux Toolkit, Pagos con MercadoPago API, autentificacion con Passport y JWT.",
     link: "https://www.linkedin.com/posts/daviddcordoba_pig-commander-the-best-finance-app-pf-activity-7102397255390797824-jjyA?utm_source=share&utm_medium=member_desktop",
-    image: "/projects/shotPig.png",
+    image: "dist/projects/shotPig.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SEQUELIZE, TAGS.POSTGRESQL, TAGS.EXPRESS],
   },
   {
@@ -67,10 +67,18 @@ const PROJECTS = [
     description:
       "Desarrollo de un carrito de compras. Firebase para el almacenamiento de los datos y ordenes de compra. Hooks de ReactJs como useContext y useState. ",
     link: "https://salemvintage.netlify.app/",
-    image: "/projects/shotSalem.png",
+    image: "dist/projects/shotSalem.png",
     tags: [TAGS.REACT,TAGS.SASS,TAGS.FIREBASE,TAGS.JAVASCRIPT],
     github:'https://github.com/daviddcordoba/React-JS-SalemVintage'
   },
+  {
+    title: "Portfolio Audiovisual",
+    description:
+      "Este proyecto es un portafolio diseñado para una Community Manager y Creadora de Contenido. Se presenta una selección de videos que muestran el trabajo realizado por la cliente. Cada video se muestra dentro de un marco de celular para dar una idea de cómo se verían en dispositivos móviles.",
+    link: "https://gabriela-zarate.vercel.app/",
+    image: "/dist/projects/shotgaby.png",
+    tags: [TAGS.REACT,TAGS.TAILWIND,TAGS.JAVASCRIPT]
+  }
 ]
 ---
 
@@ -78,47 +86,47 @@ const PROJECTS = [
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img class="object-cover w-full h-60 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+      <div class="w-full md:w-1/2">
+        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <img class="object-cover w-full h-60 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        </div>
+      </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+      <div class="w-full md:w-1/2 md:max-w-lg">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          {title}
+        </h3>
+        <div class="flex flex-col flex-wrap mt-2">
+          <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
+          <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+          <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                    Code
+                  
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                    Preview
+                </LinkButton>
+              )}
+            </footer>
+        </div>
+      </div>
 </article>
     ))
   }
