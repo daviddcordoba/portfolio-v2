@@ -54,6 +54,15 @@ const TAGS = {
 }
 const PROJECTS = [
   {
+    title: "Portfolio Community Manager - Creadora de contenido",
+    description:
+      "Responsable de la creacion de componentes y utilidades para la creación y desarrollo de la página web. Integración de redes sociales y contenido audiovisual con formato de celular para dar una idea de cómo se verían en dispositivos móviles. ",
+    link: "https://gabriela-zarate.vercel.app/",
+    image: "projects/shotGabi.png",
+    tags: [TAGS.REACT,TAGS.TAILWIND,TAGS.JAVASCRIPT],
+    github:'https://github.com/daviddcordoba/zarate-portfolio'
+  },
+  {
     title: "PigCommander - Aplicacion de finanzas personales",
     description:
       " Aplicación que permite a los usuarios registrar sus gastos e ingresos financieros. Los temas cubiertos incluyen fundamentos de API REST, Redux Toolkit, Pagos con MercadoPago API, autentificacion con Passport y JWT.",
@@ -61,15 +70,7 @@ const PROJECTS = [
     image: "projects/shotPig.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SEQUELIZE, TAGS.POSTGRESQL, TAGS.EXPRESS],
   },
-  {
-    title: "Salem Vintage - Carrito de compras",
-    description:
-      "Desarrollo de un carrito de compras. Firebase para el almacenamiento de los datos y ordenes de compra. Hooks de ReactJs como useContext y useState. ",
-    link: "https://salemvintage.netlify.app/",
-    image: "projects/shotSalem.png",
-    tags: [TAGS.REACT,TAGS.SASS,TAGS.FIREBASE,TAGS.JAVASCRIPT],
-    github:'https://github.com/daviddcordoba/React-JS-SalemVintage'
-  },
+  
 
 ]
 ---
@@ -82,7 +83,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
       <div class="w-full md:w-1/2">
         <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img class="object-cover w-full h-60 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+          <img class="object-cover w-full h-60 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"  src={image} />
         </div>
       </div>
 
